@@ -4,7 +4,9 @@ public class MultiMax {
 
     public int max(int first, int second, int third) {
 
-        return Math.max(first, second) > third ? Math.max(first, second) : third;
+        int max = first > second ? first : second;
+
+        return max > third ? max : third;
 
     }
 
