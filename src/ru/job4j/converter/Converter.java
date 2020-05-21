@@ -1,9 +1,28 @@
 package ru.job4j.converter;
 
+/**
+ * Converter
+ *
+ * @author Petr Arsentev (parsentev@yandex.ru)
+ */
+
 public class Converter {
+
+    /**
+     * Method rubleToEuro
+     * @param value
+     * @return value / 70
+     */
+
     public static int rubleToEuro(int value) {
         return value / 70;
     }
+
+    /**
+     * Method rubleToDollar
+     * @param value
+     * @return value / 60
+     */
 
     public static int rubleToDollar(int value) {
         return value / 60;
