@@ -13,6 +13,11 @@ public class CheckPrimeNumberTest {
         assertThat(rsl, is(true));
     }
     @Test
+    public void when1PrimeFalse() {
+        boolean rsl = CheckPrimeNumber.check(1);
+        assertThat(rsl, is(false));
+    }
+    @Test
     public void when6PrimeFalse() {
         boolean rsl = CheckPrimeNumber.check(6);
         assertThat(rsl, is(false));
