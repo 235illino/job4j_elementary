@@ -15,7 +15,7 @@ public class Square {
         int[] array = calculate(4);
         for (int index = 0; index < array.length; index++) {
 
-            System.out.println(Math.pow(index, 2));
+            System.out.println(Math.pow(array[index], 2));
         }
     }
 
