@@ -28,4 +28,11 @@ public class FitnessTest {
         assertThat(rsl, is(expected));
 
     }
+    @Test
+    public void whenIvan90Nik90Month1() {
+        int rsl = Fitness.calc(90, 90);
+        int expected = 1;
+        assertThat(rsl, is(expected));
+
+    }
 }
