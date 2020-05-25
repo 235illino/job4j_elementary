@@ -1,4 +1,4 @@
-package ru.job4j.condition.ru.job4j.condition.ru.job4j.condition.ru.job4j.loop.ru.job4j.loop.ru.job4j.loop.ru.job4j.loop.ru.job4j.loop.ru.job4j.loop.ru.job4j.loop;
+package ru.job4j.loop;
 
 import org.junit.Test;
 
