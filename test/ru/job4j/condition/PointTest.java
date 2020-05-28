@@ -10,11 +10,19 @@ public class PointTest {
 
 
     @Test
-    public void whenFirstPoint3And1SecondPoint5And3Distance2Point83() {
+    public void d2() {
         double expected = 2.83;
         Point a = new Point(3, 1);
         Point b = new Point(5, 3);
         double rsl = a.distance(b);
+        Assert.assertEquals(expected, rsl, 0.01);
+    }
+    @Test
+    public void d3() {
+        double expected = 3.46;
+        Point a = new Point(3, 1, 0);
+        Point b = new Point(5, 3, 2);
+        double rsl = a.distance3d(b);
         Assert.assertEquals(expected, rsl, 0.01);
     }
 }
