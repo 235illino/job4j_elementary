@@ -2,7 +2,6 @@ package ru.job4j.condition;
 
 public class Point {
     private int x;
-
     private int y;
 
     public Point(int first, int second) {
