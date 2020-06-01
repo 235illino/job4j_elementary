@@ -82,11 +82,15 @@ public class Tracker {
         return rsl;
     }
 
-    public Item replace(String id, Item item) {
+    public boolean replace(String id, Item item) {
+        boolean rp = false;
         int index = indexOf(id);
         item.setId(id);
         items[index] = item;
-        return item;
+        if (items[index].getId().equals(id)) {
+            rp = true;
+        }
+        return rp;
     }
 
     public void delete(String id) {
