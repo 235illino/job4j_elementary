@@ -85,10 +85,14 @@ public class Tracker {
     public boolean replace(String id, Item item) {
         boolean rp = false;
         int index = indexOf(id);
-        item.setId(id);
-        items[index] = item;
-        if (items[index].getId().equals(id)) {
-            rp = true;
+        if (index < 0 || index > this.items.length - 1) {
+            System.out.println("this item doesn't exist");
+        } else {
+            item.setId(id);
+            items[index] = item;
+            if (items[index].getId().equals(id)) {
+                rp = true;
+            }
         }
         return rp;
     }
@@ -96,10 +100,14 @@ public class Tracker {
     public void delete(String id) {
         int index = indexOf(id);
 //        items[indexOf(id)] = null;
-        int startPos = index + 1;
-        System.arraycopy(items, startPos, items, index, position);
-        items[position - 1] = null;
-        position--;
+        if (index < 0 || index > this.items.length - 1) {
+            System.out.println("this item doesn't exist");
+        } else {
+            int startPos = index + 1;
+            System.arraycopy(items, startPos, items, index, position);
+            items[position - 1] = null;
+            position--;
+        }
     }
 
 }
