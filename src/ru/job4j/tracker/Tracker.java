@@ -95,9 +95,9 @@ public class Tracker {
 
     public void delete(String id) {
         int index = indexOf(id);
-        items[indexOf(id)] = null;
+//        items[indexOf(id)] = null;
         int startPos = index + 1;
-        System.arraycopy(items, startPos, items, index, items.length - startPos);
+        System.arraycopy(items, startPos, items, index, position);
         items[position - 1] = null;
         position--;
     }
