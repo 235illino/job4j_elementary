@@ -14,11 +14,13 @@ public class Matches {
             System.out.println(sticks + " sticks left");
             if (sticks == 0) {
                 System.out.println("Second player win");
+                break;
             }
             System.out.println("Second player take 1 - 3 sticks");
             sticks = sticks - Integer.valueOf(input2.nextLine());
             if (sticks == 0) {
                 System.out.println("First player win");
+                break;
             }
             System.out.println(sticks + " sticks left");
         }
