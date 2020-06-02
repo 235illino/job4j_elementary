@@ -83,8 +83,8 @@ public class Tracker {
     }
 
     public boolean replace(String id, Item item) {
-        boolean rp = indexOf(id) != -1;
-        if (!rp) {
+        boolean rp = indexOf(id) == -1;
+        if (rp) {
             System.out.println("this item doesn't exist");
         } else {
             item.setId(id);
@@ -95,8 +95,8 @@ public class Tracker {
 
     public boolean delete(String id) {
         int index = indexOf(id);
-        boolean rp = indexOf(id) != -1;
-        if (!rp) {
+        boolean rp = indexOf(id) == -1;
+        if (rp) {
             System.out.println("this item doesn't exist");
         } else {
             int startPos = index + 1;
