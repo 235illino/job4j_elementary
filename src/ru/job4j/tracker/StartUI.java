@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class StartUI {
@@ -49,14 +50,24 @@ public class StartUI {
                 System.out.print("Enter id for searching: ");
                 String id = scanner.nextLine();
                 Item itemFindId = tracker.findById(id);
-                System.out.println("Your item - " + itemFindId.getName());
+                boolean rsl = Objects.isNull(itemFindId);
+                if (rsl) {
+                    System.out.println("Found nothing");
+                } else {
+                    System.out.println("Your item - " + itemFindId.getName());
+                }
             } else if (select == 5) {
                 System.out.println("=== Find item by name====");
                 System.out.print("Enter name for searching: ");
                 String name = scanner.nextLine();
-                Item[] itemFindId = tracker.findByName(name);
-                for (Item item : itemFindId) {
-                    System.out.println(item.getName());
+                Item[] itemFindName = tracker.findByName(name);
+                boolean rsl = Objects.isNull(itemFindName);
+                if (rsl) {
+                    System.out.println("Found nothing");
+                } else {
+                    for (Item item : itemFindName) {
+                        System.out.println(item.getName());
+                    }
                 }
             } else if (select == 6) {
                 run = false;
