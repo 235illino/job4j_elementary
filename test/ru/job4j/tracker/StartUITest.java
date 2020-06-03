@@ -31,9 +31,10 @@ public class StartUITest {
                 item.getId(), // id сохраненной заявки в объект tracker.
                 "replaced item"
         };
+//        StartUI.replaceItem(new StubInput(answers), tracker);
         StartUI.replaceItem(new StubInput(answers), tracker);
         Item replaced = tracker.findById(item.getId());
-        assertThat(replaced.getName(), is("replaced item"));
+assertThat(replaced.getName(), is("replaced item"));
     }
 
     @Test
