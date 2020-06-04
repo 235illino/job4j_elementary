@@ -6,6 +6,7 @@ public class Animal {
 
     public Animal(String name) {
         this.name = name;
+        System.out.println("Animal " + name);
     }
 
     public Animal() {
