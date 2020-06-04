@@ -39,15 +39,6 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-//        Item[] itemsWithoutNull = new Item[this.items.length];
-//        int size = 0;
-//        for (int index = 0; index < this.items.length; index++) {
-//            Item item = this.items[index];
-//            if (Objects.nonNull(item)) {
-//                itemsWithoutNull[size] = item;
-//                size++;
-//            }
-//        }
         return Arrays.copyOf(this.items, position);
     }
 
@@ -83,22 +74,19 @@ public class Tracker {
     }
 
     public boolean replace(String id, Item item) {
-        boolean rp = indexOf(id) == -1;
-        if (rp) {
-            System.out.println("this item doesn't exist");
-        } else {
+        int index = indexOf(id);
+        boolean rp = index == -1;
+        if (!rp) {
             item.setId(id);
-            items[indexOf(id)] = item;
+            items[index] = item;
         }
         return rp;
     }
 
     public boolean delete(String id) {
         int index = indexOf(id);
-        boolean rp = indexOf(id) == -1;
-        if (rp) {
-            System.out.println("this item doesn't exist");
-        } else {
+        boolean rp = index == -1;
+        if (!rp) {
             int startPos = index + 1;
             System.arraycopy(items, startPos, items, index, position - startPos);
             items[position - 1] = null;
